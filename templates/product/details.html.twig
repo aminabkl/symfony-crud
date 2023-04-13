@@ -1,0 +1,11 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block body %}
+    <h1>{{ product.nom }}</h1>
+    <p>{{ product.description }}</p>
+    {# <img src="{{ path('produit_image', {id: product.id}) }}" alt="{{ product.nom }}" width="100" height="auto"/> #}
+    <img src="{{ asset('uploads/images/' ~ product.image) }}" alt="{{ product.nom }} image" width="150" height="auto">
+    <p>Prix: {{ product.prix }} Dhs</p>
+    
+   <button><a  href="{{ path('home') }}"> Revenir à la page d'accueil</a></button>
+{% endblock %}
